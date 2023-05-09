@@ -15,3 +15,8 @@ $('div').click(function() {
 // console.log($('div').eq(2).find('.some'))
 // console.log($('.some').closest('.findmeq').addClass('wewe'))
 console.log($('.more').eq(0).siblings())
+$('button').fadeIn(1000);
+
+$('button').on('click', function() {
+    $('button').fadeOut(1000);
+})
