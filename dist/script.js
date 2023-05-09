@@ -343,6 +343,29 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.fadeIn = function (durat
   }
   return this;
 };
+_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.fadeToggle = function (duration, display, fin) {
+  for (let i = 0; i < this.length; i++) {
+    if (window.getComputedStyle(this[i]).display === 'none') {
+      this[i].style.display = display || 'block';
+      const _fadeIn = completion => {
+        this[i].style.opacity = completion;
+      };
+      const ani = this.animateOverTime(duration, _fadeIn, fin);
+      requestAnimationFrame(ani);
+    } else {
+      const _fadeOut = completion => {
+        this[i].style.opacity = 1 - completion;
+        if (completion === 1) {
+          this[i].style.display = 'none';
+        }
+      };
+      const ani = this.animateOverTime(duration, _fadeOut, fin);
+      requestAnimationFrame(ani);
+    }
+    return this;
+  }
+  return this;
+};
 
 /***/ }),
 
@@ -466,9 +489,10 @@ $('div').click(function () {
 // console.log($('div').eq(2).find('.some'))
 // console.log($('.some').closest('.findmeq').addClass('wewe'))
 console.log($('.more').eq(0).siblings());
-$('button').fadeIn(1000);
+// $('button').fadeIn(1000);
+
 $('button').on('click', function () {
-  $('button').fadeOut(1000);
+  $('div').eq(3).fadeToggle(1000);
 });
 })();
 
