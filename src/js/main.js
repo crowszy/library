@@ -1,6 +1,6 @@
 import './lib/lib';
 
-// $('div').on('click', sayHello);
+/* // $('div').on('click', sayHello);
 // $('div').off('click', sayHello);
 // $('div').click(sayHello);
 $('.active').show();
@@ -20,4 +20,5 @@ console.log($('.more').eq(0).siblings())
 $('button').on('click', function() {
     $('div').eq(3).fadeToggle(1000);
 })
+ */
 

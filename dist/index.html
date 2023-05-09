@@ -10,17 +10,21 @@
 <body>
 
     <div class="container">
-            <div>1</div>
-        <div class="active" style="display: none;">2</div>
-        <div class="findme">
-            <div class="some">ss</div>
-            <div class="more">mm</div>
-            <div class="some">ss</div>
-            <div class="more">mm</div>
-            <div class="some">ss</div>
+        <button class="btn btn-primary m20" id="first">I'm first, Click Me!</button>
+        <button class="btn btn-dark m20" data-count="second">I'm second, Click Me!</button>
+        <button class="btn btn-warning m20">I'm third, Click Me!</button>
+
+        <!-- Dropdown Menu -->
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton">Dropdown button</button>
+            <div class="dropdown-menu" data-toggle-id="dropdownMenuButton">
+                <a href="#" class="dropdown-item">Action #1</a>
+                <a href="#" class="dropdown-item">Action #2</a>
+                <a href="#" class="dropdown-item">Action #3</a>
+            </div>
         </div>
 
-        <button class="btn btn-primary">Click me</button>
+
     </div>
     
     <script src='script.js'></script>
