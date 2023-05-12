@@ -64,20 +64,17 @@ $.prototype.closest = function(selector) {
     let counter = 0;
 
     for (let i = 0; i < this.length; i++) {
-        if (selector === true) {
-            this[i] = this[i].closest(selector);
-            counter++;
-        } else {
-            return this;
-        }
-        
+        this[i] = this[i].closest(selector);
+        counter++;
     }
+
     const objLength = Object.keys(this).length;
-        for (; counter < objLength; counter++) {
-            delete this[counter];
-        }
+    for (; counter < objLength; counter++) {
+        delete this[counter];
+    }
+
     return this;
-}
+};
 
 $.prototype.siblings = function() {
     let numberOfItems = 0;
